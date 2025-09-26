@@ -1,0 +1,556 @@
+.approve2-container {
+  width: calc(100% - 48px);
+  max-width: 1392px;
+  border-radius: 10px;
+  opacity: 1;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: #f9fafb;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 24px;
+}
+
+/* ================================
+   Section Titles (Project, SIM, GA)
+   ================================ */
+.approve2-section-title{
+  opacity: 1;
+  font-family: "Samsung InterFace", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 145%;
+  letter-spacing: 0%;
+  color: #101928;
+  margin-bottom: 1rem;
+}
+.approve2-section-title2 {
+  width: 115px;
+  height: 23px;
+  opacity: 1;
+  font-family: "Samsung InterFace", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 145%;
+  letter-spacing: 0%;
+  color: #101928;
+  margin-bottom: 1rem;
+}
+
+/* ================================
+   Labels (Mobile Number, Connection, etc.)
+   ================================ */
+.approve2-label, 
+.comment-label {
+  font-family: "Samsung InterFace", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.015em; /* 1.5% */
+  color: #111827;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.approve2-required { 
+  color: #ef4444; 
+}
+
+/* ================================
+   Selects
+   ================================ */
+.approve2-select-wrapper { 
+  position: relative; 
+  width: 100%; 
+  height: 48px; 
+}
+
+.approve2-select {
+  width: 100%; 
+  height: 48px; 
+  padding: 12px; 
+  padding-right: 2rem;
+  border: 1px solid #d1d5db; 
+  border-radius: 5px; 
+  background-color: white;
+  appearance: none; 
+  outline: none; 
+  color: #111827; 
+  font-size: 14px;
+}
+
+.approve2-select-icon { 
+  position: absolute; 
+  right: 0.75rem; 
+  top: 0.75rem; 
+  color: #9ca3af; 
+  pointer-events: none; 
+}
+
+/* ================================
+   Inputs
+   ================================ */
+.approve2-input {
+  width: 100%;
+  height: 48px;
+  padding: 12px;
+  border: 1px solid #d1d5db; 
+  border-radius: 6px; 
+  background-color: white;
+  outline: none; 
+  color: #111827; 
+  font-size: 14px; 
+  box-sizing: border-box;
+}
+
+.approve2-assigned-wrapper .approve2-input {
+  border: 1px solid #d1d5db;
+  height: 48px;
+  width: 450px;
+  background: white;
+  border-radius: 6px;
+  padding: 12px;
+  padding-right: 80px;  /* space for icons */
+}
+
+/* ================================
+   Date Picker Styles - FIXED
+   ================================ */
+.approve2-date-wrapper {
+  position: relative;
+  width: 100%;
+  height: 48px;
+}
+
+.approve2-date-wrapper .approve2-input {
+  width: 100%;
+  height: 48px;
+  padding: 12px;
+  padding-right: 40px; /* Add space for the calendar icon */
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background-color: white;
+  outline: none;
+  color: #111827;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.calen-btn {
+  position: absolute; /* Position absolutely within the wrapper */
+  right: 12px;        /* Position from the right edge */
+  top: 50%;           /* Center vertically */
+  transform: translateY(-50%); /* Perfect vertical centering */
+  width: 20px;
+  height: 20px;
+  background: transparent;   /* Remove background */
+  border: none;              /* Remove border */
+  padding: 0;                /* Remove padding */
+  cursor: pointer;           /* Keep clickable */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calen-btn:hover {
+  background-color: transparent; /* Keep transparent on hover */
+}
+
+.calen-btn img {
+  width: 16px;
+  height: 16px;
+}
+
+.approve2-calendar-btn:hover {
+  background-color: #f3f4f6;
+  color: #6b7280;
+}
+
+.approve2-calendar-btn img {
+  width: 16px;
+  height: 16px;
+}
+
+/* Custom Calendar Popup */
+.calendar-popup {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 4px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  width: 280px;
+  font-family: "Samsung InterFace", sans-serif;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.calendar-nav-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  transition: background-color 0.2s;
+}
+
+.calendar-nav-btn:hover {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.calendar-month-year {
+  font-weight: 600;
+  font-size: 16px;
+  color: #111827;
+}
+
+.calendar-grid {
+  width: 100%;
+}
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.calendar-weekday {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  padding: 8px 4px;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.calendar-day-cell {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar-day {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #111827;
+  border-radius: 6px;
+  transition: all 0.2s;
+  min-height: 32px;
+}
+
+.calendar-day:hover {
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+.calendar-day:active {
+  background-color: #3b82f6;
+  color: white;
+}
+
+/* ================================
+   Layout Groups
+   ================================ */
+.approve2-row { 
+  display: flex; 
+  gap: 16px; 
+  margin-bottom: 1rem; 
+}
+
+.approve2-input-group { 
+  flex: 1; 
+  min-width: 200px; 
+}
+
+.approve2-field { 
+  margin-bottom: 1.5rem; 
+  text-align: left; 
+}
+
+/* ================================
+   Attachments
+   ================================ */
+.report-attachment {
+  width: 375px;
+  height: 64px;
+  border: 2px dashed #c6c6c6;
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  box-sizing: border-box;
+}
+
+.report-attachment-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-grow: 1;
+}
+
+.report-file-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  background: url("../assets/pdf.png") no-repeat center center;
+  background-size: contain;
+}
+
+.report-file-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.report-file-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #101928;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.report-file-meta {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+.report-file-delete {
+  width: 24px;
+  height: 24px;
+  background: url("../assets/pdficon.svg") no-repeat center center;
+  background-size: contain;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+/* ================================
+   Tables (unchanged from your original)
+   ================================ */
+.approve2-table-container {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.approve2-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.approve2-table th {
+  text-align: left;
+  padding: 12px 16px 12px 60px;
+  font-size: 0.875rem;
+  background-color: #eff6ff;
+  font-weight: 600;
+  color: #111827;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.approve2-table td {
+  text-align: left;
+  padding: 12px 16px 12px 60px;
+  font-size: 0.875rem;
+  color: #111827;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Table Body Rows */
+.approve2-table tbody tr {
+  width: 1289px;
+  height: 62px;
+  opacity: 1;
+  border-width: 1px;
+  border-bottom: 1px solid #e5e7eb;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  background-color: #ffffff;
+}
+
+/* Ensure last row doesn't double-border */
+.approve2-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* ================================
+   Assigned Section
+   ================================ */
+.approve2-assigned {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.approve2-assigned-wrapper {
+  position: relative; 
+  width: 415px; 
+  height: 48px;
+}
+
+.approve2-clear-btn,
+.approve2-search-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.approve2-clear-btn {
+  right: 40px;
+}
+
+.approve2-search-btn {
+  right: 12px;
+}
+
+.approve2-clear-btn img {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+}
+
+.approve2-search-btn img {
+  width: 14px;
+  height: 14px;
+  opacity: 1;
+}
+
+/* Add Button */
+.add-btn {
+  width: 75px;     
+  height: 38px;
+  background: url("../assets/addbtn.svg") no-repeat center center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  opacity: 1;
+  margin-left: 40px;
+}
+
+.add-btn:hover {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+
+/* ================================
+   Comment Box
+   ================================ */
+.comment-section {
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-box {
+  width: 100%;
+  min-height: 90px;
+  border: 0.5px solid #d1d5db;
+  border-radius: 6px;
+  background-color: #ffffff;
+  padding: 12px;
+  resize: vertical;
+  box-sizing: border-box;
+
+  font-family: "Samsung InterFace", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.015em;
+  color: #111827;
+}
+
+.comment-box:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: #d1d5db !important;
+}
+
+/* ================================
+   Action Buttons
+   ================================ */
+.approve2-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.btn-icon img {
+  width: 90px;
+  height: 38px;
+  display: block;
+}
+
+/* ================================
+   Transfer Workflow
+   ================================ */
+.transfer-workflow {
+  width: 97%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  margin-bottom: 130px; 
+}
+
+.transfer-workflow .transfer-img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
