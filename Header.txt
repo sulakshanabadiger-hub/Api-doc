@@ -1,0 +1,13 @@
+.header-subtitle {
+  font-size: 18px; 
+  font-weight: 500; 
+  margin-left: 4px;
+}
+
+
+<div className="header-title">
+  Sim Card Purchase -
+  <span className={title === "Report" ? "header-subtitle" : ""}>
+    {title || "Default Title"}
+  </span>
+</div>
